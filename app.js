@@ -1,7 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
-// Simulación de una lista de productos (modelos de notebooks)
+// Activar CORS para permitir peticiones desde cualquier origen
+app.use(cors());
+
 const productos = [
     { id: 1, nombre: 'Lenovo IdeaPad 3', precio: 450.00 },
     { id: 2, nombre: 'HP Pavilion x360', precio: 600.00 },
@@ -15,12 +18,10 @@ const productos = [
     { id: 10, nombre: 'Samsung Galaxy Book Pro', precio: 1100.00 }
 ];
 
-// Ruta para obtener la lista de productos
 app.get('/productos', (req, res) => {
     res.json(productos);
 });
 
-// Configuración del puerto
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
