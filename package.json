@@ -1,0 +1,14 @@
+{
+  "name": "curso-algoritmia-backend-nodejs",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "git@github.com:arcmop/curso-algoritmia-backend-nodejs.git",
+  "author": "Cesar Ortiz <you@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
